@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  padding-bottom: 40px;
+}
+
+.nft-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.nft-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.nft-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: url('images/icon-view.svg') no-repeat center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.nft-image-wrapper:hover::before,
+.nft-image-wrapper:hover::after {
+  opacity: 1;
+}
+
+
+.container {
+  width: 350px;
+  padding: 25px;
+  padding-bottom: 5px;
+  background: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  box-shadow: 0 20px 25px 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: left; 
+}
+
+.nft-link {
+    color:white;
+    text-decoration: none;
+}
+
+.nft-link:hover {
+    color:  hsl(178, 100%, 50%);
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left; 
+  margin-bottom: 20px;
+}
+
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0; 
+}
+
+.price-group, .time-group {
+  display: flex;
+  align-items: center;
+  height: 20px; 
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain; 
+  flex-shrink: 0; 
+  margin-bottom: 20px;
+}
+
+.price {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 6px; 
+  line-height: 1; 
+}
+
+.time {
+  color: hsl(215, 51%, 70%);
+  font-size: 16px;
+  margin-left: 6px;
+  line-height: 1;
+}
+
+.creator {
+    display: flex;
+    border-top: 1px solid hsl(215, 32%, 27%);
+     padding-top: 20px;
+     margin-top: 10px;
+     font-size: 10px;
+     
+}
+
+.avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.creator-text{
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+span{
+    color:white;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right:0;
+    color: rgba(255, 255, 255, 0.6);
+}
